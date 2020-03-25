@@ -1,0 +1,17 @@
+{
+  "name": "backend-offseason-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "knex": "^0.20.13",
+    "pg": "^7.18.2"
+  }
+}
