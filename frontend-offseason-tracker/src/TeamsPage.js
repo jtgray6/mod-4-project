@@ -6,7 +6,7 @@ export default function TeamsPage(props) {
 
     const showTeams = () => { 
         return props.teamData.map(team => {
-            return <TeamCard key={team.id} team={team}/>
+            return <TeamCard key={team.id} team={team} addTeamToFavorites={props.addTeamToFavorites}/>
         })
     }
 

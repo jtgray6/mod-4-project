@@ -17,7 +17,8 @@
   display: flex;
   flex-wrap: wrap;
   background-color: #202020;
-  padding: 1rem;
+  padding: 6rem 1rem 1rem 1rem;
+  
 }
 
 .card-logo {
@@ -49,6 +50,10 @@
   border-radius: 2rem;
 }
 
+.player-item:hover{
+  transform: scale(1.1);
+}
+
 .player-container-title {
   text-align: left;
   margin: 1rem 0 0 1rem;
@@ -70,4 +75,107 @@ p {
   display: flex;
   flex-wrap: wrap;
   padding: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: #131313;
+  position: fixed;
+  width: 100%;
+}
+
+.header-title {
+  margin-left: 1.6rem;
+  font-family: 'Days One', sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+.nav-button {
+  text-decoration: none;
+  margin-right: 3rem;
+  color: white;
+  font-family: 'Russo One', sans-serif;
+  font-size: 1.4rem;
+}
+
+.header-logo {
+  height: 3rem;
+  margin-right: 1rem;
+}
+
+.reddit-link {
+  text-decoration: none;
+  color: #161616;
+}
+
+.favorite-team-title {
+  
+  margin: 0;
+  color: white;
+}
+
+.favorites-page {
+  background-color: #202020;
+  height: 200rem;
+}
+
+.favorite-team-header {
+  padding-top: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.favorite-team-logo {
+  height: 6rem;
+  margin-right: 2rem;
+}
+
+.added-favorite-player {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 1rem 1rem 1rem 1rem;
+  width: 20rem;
+  background-color: #333333;
+  color: white;
+}
+
+.lost-favorite-player {
+  width: fit-content;
+  background-color: #333333;
+  color: white;
+  padding: 1rem;
+  margin: 1rem 1rem 1rem 1rem;
+}
+
+.added-player-details {
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.favorite-added-players-container, .favorite-lost-players-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 5rem;
+}
+
+.favorite-added-players-title, .favorite-lost-players-title {
+  color: white;
+  text-align: left;
+  margin-left: 5rem;
+}
+
+.player-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lost-favorite-position, .added-favorite-position {
+  margin-right: 1rem;
+  font-weight: bolder;
 }

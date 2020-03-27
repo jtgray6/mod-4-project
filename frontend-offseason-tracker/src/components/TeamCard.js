@@ -7,25 +7,33 @@ import Typography from '@material-ui/core/Typography';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 
+export default function TeamCard({team, addTeamToFavorites}) {
 
-export default function TeamCard({team}) {
+    const turnPlayerGreen = (event) => {
+        console.log(event)
+        event.target.style.backgroundColor = 'green'
+    }
 
-    console.log(team)
+    const turnPlayerRed = (event) => {
+        console.log(event)
+        event.target.style.backgroundColor = 'red'
+    }
 
     const showAddedPlayers = () => {
         return team.addedPlayers.map(player => {
             return (
-                <div className='player-item'>
-                    <p className='player-position'>{player.position}</p>
-                    <p className='player-name'>{player.name}</p>
+                <div key={player.player.id} className='player-item' onClick={event => turnPlayerGreen(event)}>
+                    <p className='player-position'>{player.player.position}</p>
+                    <p className='player-name'>{player.player.name}</p>
                 </div>
             )
         }
     )}
+
     const showLostPlayers = () => {
         return team.lostPlayers.map(player => {
             return (
-                <div className='player-item'>
+                <div key={player.id} className='player-item' onClick={event => turnPlayerRed(event)}>
                     <p className='player-position'>{player.position}</p>
                     <p className='player-name'>{player.name}</p>
                 </div>
@@ -41,20 +49,20 @@ export default function TeamCard({team}) {
                 <p className="team-card-name">{team.name}</p>
             </Typography>
                 <h3 className='player-container-title'>Added Players</h3>
-            <Typography className='players-list'>
+            <Typography component='div' className='players-list'>
                 {showAddedPlayers()}
             </Typography>
                 <h3 className='player-container-title'>Lost Players</h3>
-            <Typography className='players-list'>
+            <Typography component='div' className='players-list'>
                 {showLostPlayers()}
             </Typography>
           
             <CardActions className='card-actions'>
                 <IconButton aria-label="add to favorites">
-                    <FavoriteIcon />
+                    <FavoriteIcon onClick={event => addTeamToFavorites(team, event)}/>
                 </IconButton>
                 <IconButton aria-label="share">
-                    <ShareIcon />
+                    <a href="https://www.reddit.com/r/nfl/" className="reddit-link"><ShareIcon/></a>
                 </IconButton>
             </CardActions>
           </CardContent>

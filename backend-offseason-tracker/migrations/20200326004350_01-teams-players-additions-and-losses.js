@@ -35,6 +35,9 @@ exports.down = function(knex) {
         return knex.schema.dropTableIfExists("players")
     })
     .then(() => {
+        return knex.schema.dropTableIfExists('favorites')
+    })
+    .then(() => {
         return knex.schema.dropTableIfExists("teams")
     })
 };
