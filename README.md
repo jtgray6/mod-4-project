@@ -19,7 +19,7 @@ Requirements:
 * Node, Express, Knex, Postgres
 * React
 
-Clone and fork this repository. Navigate to the backend-offseason-tracker folder and run 'npm start' to start the backend. In a seperate terminal, navigate to the frontend-off-season folder and run 'npm run serve'
+Clone and fork this repository. Run npm install. Navigate to the backend-offseason-tracker folder and run 'npm start' to start the backend. In a seperate terminal, navigate to the frontend-off-season folder and run 'npm run serve'
 
 ### Contributor's Guide
 Feel free to contribute to this project by forking and cloning the repo.
